@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-body text-bark;
+  }
+}
+
+@layer components {
+  .btn-forest {
+    @apply bg-forest-800 text-cream font-body font-bold tracking-wide hover:bg-forest-700 transition-colors duration-200 inline-block text-center;
+  }
+  .btn-earth {
+    @apply bg-earth-900 text-cream font-body font-bold tracking-wide hover:bg-earth-700 transition-colors duration-200 inline-block text-center;
+  }
+  .btn-outline-light {
+    @apply border-2 border-cream text-cream font-body font-bold tracking-wide hover:bg-cream hover:text-forest-900 transition-colors duration-200 inline-block text-center;
+  }
+  .btn-outline-dark {
+    @apply border-2 border-forest-800 text-forest-800 font-body font-bold tracking-wide hover:bg-forest-800 hover:text-cream transition-colors duration-200 inline-block text-center;
+  }
+}
+
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.page-fade-enter-from,
+.page-fade-leave-to {
+  opacity: 0;
+}
