@@ -29,7 +29,7 @@ const submitForm = async () => {
 
   try {
     // Replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io
-    const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const response = await fetch('https://formspree.io/f/xqejrjvn', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
