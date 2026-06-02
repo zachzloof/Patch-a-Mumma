@@ -86,7 +86,7 @@ const submitForm = async () => {
             </p>
             <!-- When you have your Calendly URL, replace the href below and remove the placeholder div above -->
             <a
-              href="https://calendly.com/YOUR_USERNAME"
+              href="https://calendly.com/penny-patch-a-mumma/30min"
               target="_blank"
               rel="noopener noreferrer"
               class="btn-earth py-3 px-8 rounded-full text-base"
