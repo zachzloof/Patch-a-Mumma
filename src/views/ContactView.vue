@@ -66,7 +66,7 @@ const submitForm = async () => {
         <!-- Booking section -->
         <div class="mb-20">
           <div class="text-center mb-12">
-            <p class="font-body text-sm font-bold text-forest-700 uppercase tracking-widest mb-3">Step 1</p>
+            <p class="font-body text-sm font-bold text-forest-700 uppercase tracking-widest mb-3">Option A</p>
             <h2 class="font-heading text-4xl font-bold text-bark mb-4">Book a Free Consultation</h2>
             <p class="font-body text-bark/70 max-w-xl mx-auto leading-relaxed">
               Pick a time that works for you and we'll have a no-pressure chat about your space,
@@ -113,7 +113,7 @@ const submitForm = async () => {
         <!-- Contact form -->
         <div class="max-w-2xl mx-auto">
           <div class="text-center mb-10">
-            <p class="font-body text-sm font-bold text-forest-700 uppercase tracking-widest mb-3">Step 2</p>
+            <p class="font-body text-sm font-bold text-forest-700 uppercase tracking-widest mb-3">Option B</p>
             <h2 class="font-heading text-4xl font-bold text-bark mb-4">Send Us a Message</h2>
             <p class="font-body text-bark/70 leading-relaxed">
               Prefer to write? Fill in the form and we'll get back to you within one business day.
