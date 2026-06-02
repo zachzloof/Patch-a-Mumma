@@ -42,10 +42,10 @@ const submitForm = async () => {
       submitted.value = true
       form.value = { name: '', email: '', phone: '', service: '', message: '' }
     } else {
-      error.value = 'Something went wrong. Please email us directly at hello@patchamumma.com.au'
+      error.value = 'Something went wrong. Please email us directly at penny@patch-a-mumma.co.uk'
     }
   } catch {
-    error.value = 'Something went wrong. Please email us directly at hello@patchamumma.com.au'
+    error.value = 'Something went wrong. Please email us directly at penny@patch-a-mumma.co.uk'
   } finally {
     submitting.value = false
   }
@@ -219,10 +219,10 @@ const submitForm = async () => {
         <div class="mt-16 pt-12 border-t border-cream-dark text-center">
           <p class="font-body text-bark/60 text-sm mb-3">Prefer to reach us directly?</p>
           <a
-            href="mailto:hello@patchamumma.com.au"
+            href="mailto:penny@patch-a-mumma.co.uk"
             class="font-heading text-xl font-semibold text-forest-800 hover:text-forest-700 transition-colors"
           >
-            hello@patchamumma.com.au
+            penny@patch-a-mumma.co.uk
           </a>
         </div>
 

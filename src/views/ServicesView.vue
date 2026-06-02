@@ -17,7 +17,7 @@ const services = [
       'Companion planting strategy',
       'Recommended plant varieties for your climate',
     ],
-    price: 'From $150',
+    price: 'From £95',
   },
   {
     id: 'install',
@@ -49,7 +49,7 @@ const services = [
       'Seasonal crop rotation and replanting',
       'Progress updates and harvest reports',
     ],
-    price: 'From $80/visit',
+    price: 'From £55/visit',
   },
   {
     id: 'fermentation',
@@ -65,7 +65,7 @@ const services = [
       'Drying and dehydrating seasonal crops',
       'Take-home starter kits and recipes',
     ],
-    price: 'From $120/session',
+    price: 'From £80/session',
   },
   {
     id: 'workshops',
@@ -81,7 +81,7 @@ const services = [
       'Composting and soil health',
       'Herb growing and culinary use',
     ],
-    price: 'From $60/person',
+    price: 'From £40/person',
   },
 ]
 </script>
