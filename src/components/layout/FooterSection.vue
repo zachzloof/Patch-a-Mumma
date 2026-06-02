@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router'
             <span class="font-heading text-xl font-bold text-cream">Patch A Mumma</span>
           </RouterLink>
           <p class="text-sm leading-relaxed mb-5 text-forest-200/80 max-w-xs">
-            Helping everyday Australians reclaim their food through vegetable gardens,
+            Helping everyday people across Essex reclaim their food through vegetable gardens,
             fruit trees, herbs, and the ancient art of fermentation.
           </p>
           <div class="flex gap-3">
@@ -70,7 +70,7 @@ import { RouterLink } from 'vue-router'
               <svg class="w-4 h-4 mt-0.5 text-forest-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
               </svg>
-              <span>Australia</span>
+              <span>Chelmsford, Essex, UK</span>
             </li>
           </ul>
           <RouterLink

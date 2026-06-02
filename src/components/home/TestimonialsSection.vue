@@ -4,21 +4,21 @@ const testimonials = [
     quote:
       'Patch A Mumma completely transformed our backyard. We went from a patchy lawn to a proper kitchen garden in a few weeks. The kids love harvesting tomatoes straight off the vine.',
     name: 'Sarah M.',
-    location: 'Melbourne, VIC',
+    location: 'Chelmsford, Essex',
     initials: 'SM',
   },
   {
     quote:
       'I had no idea where to start with growing my own food. The team made it so easy — they planned everything, did all the hard work, and taught me how to keep it going.',
     name: 'James R.',
-    location: 'Brisbane, QLD',
+    location: 'Braintree, Essex',
     initials: 'JR',
   },
   {
     quote:
       'The fermentation workshop was a game changer. I now make my own sauerkraut, pickles, and even kombucha. Nothing goes to waste from the garden anymore.',
     name: 'Lily T.',
-    location: 'Sydney, NSW',
+    location: 'Colchester, Essex',
     initials: 'LT',
   },
 ]

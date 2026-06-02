@@ -165,7 +165,7 @@ const submitForm = async () => {
                   id="phone"
                   v-model="form.phone"
                   type="tel"
-                  placeholder="04XX XXX XXX"
+                  placeholder="07XXX XXX XXX"
                   class="w-full bg-white border border-cream-dark rounded-xl px-4 py-3 font-body text-bark focus:outline-none focus:border-forest-600 focus:ring-2 focus:ring-forest-600/20 transition-colors"
                 />
               </div>

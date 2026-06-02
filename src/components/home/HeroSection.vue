@@ -31,7 +31,7 @@ import { RouterLink } from 'vue-router'
 
       <!-- Subheadline -->
       <p class="font-body text-lg sm:text-xl text-forest-100/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-        We help everyday Australians transform their backyards into thriving food gardens —
+        We help everyday people across Essex transform their gardens into thriving food patches —
         vegetables, fruits, herbs, and the know-how to make the most of every harvest.
       </p>
 
