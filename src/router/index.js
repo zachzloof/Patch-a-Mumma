@@ -17,10 +17,20 @@ const router = createRouter({
     const behavior = reducedMotion() ? 'auto' : 'smooth'
     if (savedPosition) return savedPosition
     if (to.hash) {
-      // Wait for the page transition before scrolling to an anchor.
-      return new Promise((resolve) => setTimeout(() => resolve({ el: to.hash, top: 80, behavior }), 300))
+      // Wait until the anchor exists (the page transition swaps views first),
+      // then scroll to it. Falls back to the top if it never appears.
+      return new Promise((resolve) => {
+        const started = Date.now()
+        const tick = () => {
+          const el = document.querySelector(to.hash)
+          if (el) resolve({ el: to.hash, top: 88, behavior: from.path === to.path ? behavior : 'instant' })
+          else if (Date.now() - started > 2500) resolve({ top: 0 })
+          else setTimeout(tick, 40)
+        }
+        setTimeout(tick, from.path === to.path ? 0 : 250)
+      })
     }
-    return { top: 0, behavior: from.path === to.path ? behavior : 'auto' }
+    return { top: 0, behavior: from.path === to.path ? behavior : 'instant' }
   },
 })
 

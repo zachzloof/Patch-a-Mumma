@@ -23,7 +23,7 @@ defineProps({
           <h1 id="page-title" class="display text-[3.4rem] text-paper sm:text-[4.5rem] lg:text-[5.5rem]">{{ title }}</h1>
           <p v-if="subtitle" class="mt-4 max-w-[46ch] text-[1.1875rem] leading-relaxed text-[#F3EAD6]">{{ subtitle }}</p>
         </div>
-        <RouterLink v-if="cta" to="/contact#book" class="btn-rust shrink-0 sm:self-start md:self-end">Book a free chat</RouterLink>
+        <RouterLink v-if="cta" to="/contact#book" data-book-cta class="btn-rust shrink-0 sm:self-start md:self-end">Book a free chat</RouterLink>
       </div>
     </div>
     <StrataEdge top="#3A2518" bottom="#FAF9F4" :seed="40 + seed" line="#2A1A10" />

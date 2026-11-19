@@ -46,7 +46,7 @@ const links = [
           <li><a :href="`mailto:${CONTACT.email}`" class="break-all hover:text-paper hover:underline">{{ CONTACT.email }}</a></li>
           <li>{{ CONTACT.place }}</li>
         </ul>
-        <RouterLink to="/contact#book" class="btn-rust mt-6">Book a free chat</RouterLink>
+        <RouterLink to="/contact#book" data-book-cta class="btn-rust mt-6">Book a free chat</RouterLink>
       </div>
     </div>
     <div class="relative border-t border-[#4A3426]">

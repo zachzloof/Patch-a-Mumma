@@ -59,7 +59,7 @@ useMotion(shelf, (el) => {
     </div>
 
     <!-- the close, still in the chalk -->
-    <div class="relative overflow-hidden">
+    <div class="relative -mt-px overflow-hidden">
       <SoilFill kind="chalk" :seed="14" />
       <div class="page-x relative">
         <div class="flex flex-col gap-8 border-t-2 border-ink py-14 md:flex-row md:items-end md:justify-between md:py-20">

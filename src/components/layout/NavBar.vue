@@ -18,8 +18,31 @@ const links = [
   { to: '/contact', label: 'Contact' },
 ]
 
-const onScroll = () => {
-  showBar.value = window.scrollY > 520
+// The phone booking bar shows whenever no in-page booking button is on screen,
+// so a free chat is always one tap away, whatever the screen height.
+let io
+let ctaTimer
+const visibleCtas = new Set()
+function watchCtas() {
+  io?.disconnect()
+  visibleCtas.clear()
+  const els = document.querySelectorAll('[data-book-cta]')
+  if (!els.length) {
+    showBar.value = true
+    return
+  }
+  io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => (e.isIntersecting ? visibleCtas.add(e.target) : visibleCtas.delete(e.target)))
+      showBar.value = visibleCtas.size === 0
+    },
+    { threshold: 0.99 },
+  )
+  els.forEach((el) => io.observe(el))
+}
+const rewatch = () => {
+  clearTimeout(ctaTimer)
+  ctaTimer = setTimeout(watchCtas, 500) // after the page transition settles
 }
 const onKey = (e) => {
   if (e.key === 'Escape' && menuOpen.value) {
@@ -28,22 +51,27 @@ const onKey = (e) => {
   }
 }
 onMounted(() => {
-  window.addEventListener('scroll', onScroll, { passive: true })
   window.addEventListener('keydown', onKey)
-  onScroll()
+  rewatch()
 })
 onUnmounted(() => {
-  window.removeEventListener('scroll', onScroll)
   window.removeEventListener('keydown', onKey)
+  io?.disconnect()
+  clearTimeout(ctaTimer)
 })
 watch(
   () => route.fullPath,
   () => {
     menuOpen.value = false
+    rewatch()
   },
 )
 watch(menuOpen, async (open) => {
   document.documentElement.style.overflow = open ? 'hidden' : ''
+  // keep keyboard focus inside the open menu
+  for (const el of [document.getElementById('main'), document.querySelector('body > #app footer')]) {
+    if (el) el.inert = open
+  }
   if (open) {
     await nextTick()
     firstLink.value?.[0]?.$el?.focus()

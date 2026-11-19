@@ -47,7 +47,7 @@ useMotion(soil, (el) => rootsOnScroll(el, { start: 'top 95%', end: 'bottom 20%' 
             We turn ordinary Essex gardens into food patches, then help you keep them going, from soil to jar.
           </p>
           <div class="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-7">
-            <RouterLink to="/contact#book" class="btn-rust w-full sm:w-auto sm:px-9">
+            <RouterLink to="/contact#book" data-book-cta class="btn-rust w-full sm:w-auto sm:px-9">
               Book a free chat
               <svg class="h-5 w-5" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
             </RouterLink>
