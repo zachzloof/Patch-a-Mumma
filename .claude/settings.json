@@ -1,0 +1,20 @@
+{
+  "enabledPlugins": {
+    "impeccable@impeccable": true,
+    "stardust@adobe-skills": true,
+    "modern-web-guidance@claude-plugins-official": true,
+    "web-quality-skills@addy-web-quality-skills": true,
+    "context7@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "impeccable": {
+      "source": { "source": "github", "repo": "pbakaus/impeccable" }
+    },
+    "adobe-skills": {
+      "source": { "source": "github", "repo": "adobe/skills" }
+    },
+    "addy-web-quality-skills": {
+      "source": { "source": "github", "repo": "addyosmani/web-quality-skills" }
+    }
+  }
+}
