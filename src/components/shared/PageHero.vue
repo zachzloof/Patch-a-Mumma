@@ -1,21 +1,31 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+import GardenBand from '../art/GardenBand.vue'
+import SoilFill from '../art/SoilFill.vue'
+import StrataEdge from '../art/StrataEdge.vue'
+
+// Inner-page opening: a shorter garden band, the page title set in the topsoil.
 defineProps({
   title: { type: String, required: true },
   subtitle: { type: String, default: '' },
-  image: { type: String, required: true },
+  seed: { type: Number, default: 0 },
+  cta: { type: Boolean, default: true },
 })
 </script>
 
 <template>
-  <section class="relative h-64 md:h-80 flex items-end overflow-hidden">
-    <div
-      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      :style="{ backgroundImage: `url(${image})` }"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-forest-900/60 to-forest-900/80" />
-    <div class="relative z-10 px-4 sm:px-6 max-w-6xl mx-auto w-full pb-10">
-      <h1 class="font-heading text-4xl md:text-5xl font-bold text-cream leading-tight">{{ title }}</h1>
-      <p v-if="subtitle" class="font-body text-forest-200 mt-2 text-lg">{{ subtitle }}</p>
+  <section aria-labelledby="page-title">
+    <GardenBand layout="compact" :seed="seed" :plates="false" />
+    <div class="relative -mt-px overflow-hidden">
+      <SoilFill kind="topsoil" :seed="17 + seed" />
+      <div class="page-x relative flex flex-col gap-6 pb-12 pt-6 md:flex-row md:items-end md:justify-between md:pb-14 md:pt-8">
+        <div>
+          <h1 id="page-title" class="display text-[3.4rem] text-paper sm:text-[4.5rem] lg:text-[5.5rem]">{{ title }}</h1>
+          <p v-if="subtitle" class="mt-4 max-w-[46ch] text-[1.1875rem] leading-relaxed text-[#F3EAD6]">{{ subtitle }}</p>
+        </div>
+        <RouterLink v-if="cta" to="/contact#book" class="btn-rust shrink-0 sm:self-start md:self-end">Book a free chat</RouterLink>
+      </div>
     </div>
+    <StrataEdge top="#3A2518" bottom="#FAF9F4" :seed="40 + seed" line="#2A1A10" />
   </section>
 </template>

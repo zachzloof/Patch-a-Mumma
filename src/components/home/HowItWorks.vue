@@ -1,64 +1,51 @@
-<template>
-  <section class="py-20 bg-forest-900 text-cream">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <!-- Heading -->
-      <div class="text-center mb-16">
-        <p class="font-body text-sm font-bold text-forest-600 uppercase tracking-widest mb-3">The Process</p>
-        <h2 class="font-heading text-4xl md:text-5xl font-bold text-cream leading-tight">
-          Simple as seeds in soil.
-        </h2>
-      </div>
-
-      <!-- Steps -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-        <!-- Connecting line (desktop) -->
-        <div class="hidden md:block absolute top-10 left-1/3 right-1/3 h-0.5 bg-forest-700" />
-
-        <div
-          v-for="(step, index) in steps"
-          :key="step.title"
-          class="text-center relative"
-        >
-          <!-- Number circle -->
-          <div class="w-20 h-20 rounded-full bg-forest-800 border-2 border-forest-600 flex items-center justify-center mx-auto mb-6 relative z-10">
-            <span class="font-heading text-2xl font-bold text-forest-600">{{ index + 1 }}</span>
-          </div>
-          <h3 class="font-heading text-2xl font-bold text-cream mb-3">{{ step.title }}</h3>
-          <p class="font-body text-forest-200/80 leading-relaxed max-w-xs mx-auto">{{ step.description }}</p>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="text-center mt-14">
-        <RouterLink
-          to="/contact"
-          class="btn-earth py-4 px-10 rounded-full text-base"
-        >
-          Start Your Garden Journey
-        </RouterLink>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import RaisedBed from '../art/RaisedBed.vue'
+import { useMotion, growWhenSeen } from '../../composables/useGrowth.js'
 
 const steps = [
   {
-    title: 'We Visit',
+    title: 'We visit',
     description:
-      'We come to your space, listen to what you want, and assess the soil, sunlight, and layout to understand what\'s possible.',
+      "We come to your space, listen to what you want, and assess the soil, sunlight, and layout to understand what's possible.",
   },
   {
-    title: 'We Plant',
+    title: 'We plant',
     description:
-      'We design a custom food garden for your space and get our hands dirty — building beds, preparing soil, and planting your first crops.',
+      'We design a custom food garden for your space and get our hands dirty: building beds, preparing soil, and planting your first crops.',
   },
   {
-    title: 'You Grow',
+    title: 'You grow',
     description:
-      'Your garden is yours. We\'re here to support you every step of the way — through maintenance visits, workshops, and harvesting together.',
+      "Your garden is yours. We're here to support you every step of the way, through maintenance visits, workshops, and harvesting together.",
   },
 ]
+
+const beds = ref([])
+const root = ref(null)
+useMotion(root, () => beds.value.forEach((el) => growWhenSeen(el)))
 </script>
+
+<template>
+  <section ref="root" class="py-16 md:py-24" aria-labelledby="how-title">
+    <div class="page-x">
+      <h2 id="how-title" class="display text-[3.25rem] md:text-[4.75rem]">Simple as seeds in soil.</h2>
+      <p class="mt-4 max-w-[52ch] text-[1.125rem] leading-relaxed text-ink-soft">
+        One bed, three moments. You don't need to know a thing about gardening to start.
+      </p>
+
+      <ol class="mt-12 grid gap-12 md:mt-16 md:grid-cols-3 md:gap-0">
+        <li v-for="(step, i) in steps" :key="step.title" class="md:px-6 md:first:pl-0 md:last:pr-0">
+          <div :ref="(el) => el && (beds[i] = el)">
+            <RaisedBed :stage="i" />
+          </div>
+          <h3 class="condensed mt-5 text-[2rem]">{{ step.title }}</h3>
+          <p class="mt-2 max-w-[38ch] leading-relaxed text-ink-soft">{{ step.description }}</p>
+        </li>
+      </ol>
+
+      <RouterLink to="/contact#book" class="btn-rust mt-12 w-full sm:w-auto">Start with a free chat</RouterLink>
+    </div>
+  </section>
+</template>

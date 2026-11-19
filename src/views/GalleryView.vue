@@ -2,108 +2,60 @@
 import { RouterLink } from 'vue-router'
 import PageHero from '../components/shared/PageHero.vue'
 
+// Stock photos (Unsplash) standing in until Patch A Mumma's own project photos
+// are ready. Captions describe the scene, never claim it as our work.
 const images = [
-  {
-    url: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&h=750&q=80',
-    alt: 'Established raised vegetable beds with a mix of seasonal crops',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&h=500&q=80',
-    alt: 'Early morning light through a kitchen herb garden',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&h=700&q=80',
-    alt: 'Fresh harvest from the patch — tomatoes, zucchini, and basil',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&h=600&q=80',
-    alt: 'Lush herb garden with rosemary, thyme, and sage',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=800&q=80',
-    alt: 'Fermentation jars lined up after a harvest — sauerkraut and pickles',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&h=500&q=80',
-    alt: 'Workshop day — learning to plant and propagate',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?auto=format&fit=crop&w=600&h=700&q=80',
-    alt: 'Pumpkins and squash from the autumn harvest',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?auto=format&fit=crop&w=600&h=600&q=80',
-    alt: 'Freshly picked berries from the garden',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=600&h=750&q=80',
-    alt: 'Vibrant kale and leafy greens growing in beds',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1526318896950-4b69264c7337?auto=format&fit=crop&w=600&h=500&q=80',
-    alt: 'A thriving backyard food garden in full swing',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&h=650&q=80',
-    alt: 'Garden bed freshly planted with seedlings and herbs',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&h=700&q=80',
-    alt: 'Communal garden space with multiple growing beds',
-  },
+  { id: '1416879595882-3373a0480b5b', h: 750, alt: 'A trowel resting in freshly turned soil' },
+  { id: '1530836369250-ef72a3f5cda8', h: 500, alt: 'Pricking out seedlings by hand' },
+  { id: '1464226184884-fa280b87c399', h: 700, alt: 'A fresh harvest: carrots, gourds, beans and chillies' },
+  { id: '1594282486552-05b4d80fbb9f', h: 600, alt: 'Cabbages hearting up in a bed' },
+  { id: '1466692476868-aef1dfb1e735', h: 500, alt: 'Seedlings coming up in a module tray' },
+  { id: '1622383563227-04401ab4e5ea', h: 750, alt: 'A seedling lifted with its root ball' },
+  { id: '1589927986089-35812388d1f4', h: 500, alt: 'Carrots, pulled and washed' },
+  { id: '1523348837708-15d4a09cfac2', h: 700, alt: 'Seedlings potted on, ready to plant out' },
+  { id: '1576045057995-568f588f82fb', h: 750, alt: 'Spinach, freshly cut and bunched' },
 ]
+const src = (img, w = 600) => `https://images.unsplash.com/photo-${img.id}?auto=format&fit=crop&w=${w}&h=${Math.round((img.h * w) / 600)}&q=72`
 </script>
 
 <template>
   <div>
-    <PageHero
-      title="Our Work"
-      subtitle="A growing collection of backyards turned food gardens."
-      image="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80"
-    />
+    <PageHero title="Gallery" subtitle="What a food patch can look like, from first seedling to full jar." :seed="11" />
 
-    <section class="py-16 bg-cream">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
-        <p class="text-center font-body text-bark/60 mb-10">
-          Every garden is different. Every harvest is personal.<br />
-          Here's a glimpse at what we've been growing.
+    <section class="py-14 md:py-20" aria-label="Photos">
+      <div class="page-x">
+        <p class="max-w-[60ch] text-[1.0625rem] leading-relaxed text-ink-soft">
+          Photos of our own Essex gardens are on their way. Until then, these stock photos show the kind of patches,
+          harvests and preserves we help people grow.
         </p>
 
-        <!-- Masonry grid via CSS columns -->
-        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
-          <div
-            v-for="img in images"
-            :key="img.url"
-            class="break-inside-avoid mb-4 group relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow"
-          >
-            <img
-              :src="img.url"
-              :alt="img.alt"
-              class="w-full object-cover block group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-            <!-- Caption overlay -->
-            <div class="absolute inset-0 bg-forest-900/0 group-hover:bg-forest-900/50 transition-colors duration-300 flex items-end">
-              <p class="text-cream font-body text-sm px-4 py-3 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                {{ img.alt }}
-              </p>
+        <div class="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3">
+          <figure v-for="(img, i) in images" :key="img.id" class="mb-8 break-inside-avoid">
+            <div class="overflow-hidden border-2 border-ink bg-paper-deep">
+              <img
+                :src="src(img)"
+                :srcset="`${src(img, 400)} 400w, ${src(img, 600)} 600w, ${src(img, 900)} 900w`"
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                :alt="img.alt"
+                width="600"
+                :height="img.h"
+                loading="lazy"
+                decoding="async"
+                class="block h-auto w-full transition-transform duration-700 ease-out hover:scale-[1.03] motion-reduce:transition-none motion-reduce:hover:scale-100"
+              />
             </div>
-          </div>
+            <figcaption class="mt-2.5 flex items-baseline justify-between gap-4 text-[0.9375rem]">
+              <span class="text-ink"><span class="figures mr-2 font-bold text-leaf-700">Fig. {{ i + 1 }}</span>{{ img.alt }}</span>
+              <span class="shrink-0 text-[0.8125rem] text-ink-soft">Unsplash</span>
+            </figcaption>
+          </figure>
         </div>
 
-        <!-- CTA -->
-        <div class="text-center mt-14">
-          <p class="font-body text-bark/70 mb-5">Want your backyard to be next?</p>
-          <RouterLink
-            to="/contact"
-            class="btn-earth py-4 px-10 rounded-full text-base"
-          >
-            Book a Consultation
-          </RouterLink>
+        <div class="mt-8 flex flex-col items-start gap-4 border-t-2 border-ink pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p class="condensed text-[1.75rem]">Want your garden to be next?</p>
+          <RouterLink to="/contact#book" class="btn-rust w-full sm:w-auto">Book a free chat</RouterLink>
         </div>
       </div>
     </section>
   </div>
 </template>
-

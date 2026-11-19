@@ -1,10 +1,14 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import SproutMark from '../art/SproutMark.vue'
+import GardenBand from '../art/GardenBand.vue'
 
 const menuOpen = ref(false)
-const scrolled = ref(false)
+const showBar = ref(false)
 const route = useRoute()
+const menuButton = ref(null)
+const firstLink = ref(null)
 
 const links = [
   { to: '/', label: 'Home' },
@@ -14,108 +18,156 @@ const links = [
   { to: '/contact', label: 'Contact' },
 ]
 
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 20
+const onScroll = () => {
+  showBar.value = window.scrollY > 520
 }
-
-onMounted(() => window.addEventListener('scroll', handleScroll))
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
-
-const closeMenu = () => {
-  menuOpen.value = false
+const onKey = (e) => {
+  if (e.key === 'Escape' && menuOpen.value) {
+    menuOpen.value = false
+    menuButton.value?.focus()
+  }
 }
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', onKey)
+  onScroll()
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', onKey)
+})
+watch(
+  () => route.fullPath,
+  () => {
+    menuOpen.value = false
+  },
+)
+watch(menuOpen, async (open) => {
+  document.documentElement.style.overflow = open ? 'hidden' : ''
+  if (open) {
+    await nextTick()
+    firstLink.value?.[0]?.$el?.focus()
+  }
+})
+const isActive = (to) => (to === '/' ? route.path === '/' : route.path.startsWith(to))
 </script>
 
 <template>
-  <nav
-    :class="[
-      'fixed top-0 w-full z-50 transition-all duration-300',
-      scrolled ? 'bg-forest-900 shadow-lg' : 'bg-forest-900/95 backdrop-blur-sm',
-    ]"
-  >
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
-        <RouterLink to="/" @click="closeMenu" class="flex items-center gap-2 group">
-          <svg class="w-7 h-7 text-forest-600 group-hover:text-forest-200 transition-colors" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 3-11 5.5 3-4.5 10-4 10-4S17 8 17 8z"/>
-          </svg>
-          <span class="font-heading text-xl font-bold text-cream group-hover:text-forest-200 transition-colors leading-none">
-            Patch A Mumma
-          </span>
-        </RouterLink>
+  <header class="sticky top-0 z-50 border-b border-ink/15 bg-paper">
+    <a
+      href="#main"
+      class="absolute left-3 top-2 z-[60] -translate-y-20 bg-ink px-4 py-2 font-semibold text-paper focus:translate-y-0"
+    >
+      Skip to content
+    </a>
+    <nav class="page-x flex h-16 items-center justify-between gap-4" aria-label="Main">
+      <RouterLink to="/" class="group flex items-center gap-2 text-ink" aria-label="Patch A Mumma, home">
+        <SproutMark class="h-8 w-8 text-leaf-700 transition-transform duration-300 group-hover:-rotate-6" />
+        <span class="display text-[1.75rem] leading-none tracking-[-0.005em]">Patch A Mumma</span>
+      </RouterLink>
 
-        <!-- Desktop nav -->
-        <div class="hidden md:flex items-center gap-6">
+      <ul class="hidden items-center gap-7 md:flex">
+        <li v-for="link in links" :key="link.to">
           <RouterLink
-            v-for="link in links"
-            :key="link.to"
             :to="link.to"
-            class="font-body text-sm text-forest-200 hover:text-cream transition-colors relative group"
-            :class="{ 'text-cream': route.path === link.to }"
+            class="relative py-2 text-[0.9375rem] font-semibold text-ink-soft transition-colors hover:text-ink"
+            :class="{ '!text-ink': isActive(link.to) }"
+            :aria-current="isActive(link.to) ? 'page' : undefined"
           >
             {{ link.label }}
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-forest-600 group-hover:w-full transition-all duration-300" />
+            <span
+              v-if="isActive(link.to)"
+              class="absolute -bottom-0.5 left-0 right-0 h-[3px] rounded-full bg-leaf-500"
+              aria-hidden="true"
+            />
           </RouterLink>
-          <RouterLink
-            to="/contact"
-            class="btn-earth text-sm py-2 px-5 rounded-full ml-2"
-          >
-            Book Now
-          </RouterLink>
-        </div>
+        </li>
+        <li>
+          <RouterLink to="/contact#book" class="btn-rust !min-h-0 !px-5 !py-3 text-[0.9375rem]">Book a free chat</RouterLink>
+        </li>
+      </ul>
 
-        <!-- Mobile hamburger -->
-        <button
-          @click="menuOpen = !menuOpen"
-          class="md:hidden text-cream p-2 rounded-lg hover:bg-forest-800 transition-colors"
-          aria-label="Toggle navigation menu"
-        >
-          <svg v-if="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
+      <button
+        ref="menuButton"
+        type="button"
+        class="btn-line !min-h-0 !px-4 !py-2.5 text-[0.9375rem] md:hidden"
+        :aria-expanded="menuOpen"
+        aria-controls="mobile-menu"
+        @click="menuOpen = !menuOpen"
+      >
+        {{ menuOpen ? 'Close' : 'Menu' }}
+      </button>
+    </nav>
 
-      <!-- Mobile menu -->
-      <Transition name="mobile-menu">
-        <div v-if="menuOpen" class="md:hidden border-t border-forest-800 pb-4 mt-1">
-          <div class="flex flex-col gap-1 pt-2">
+    <Transition name="drop">
+      <div
+        v-if="menuOpen"
+        id="mobile-menu"
+        class="fixed inset-x-0 bottom-0 top-16 z-40 flex flex-col overflow-y-auto bg-paper md:hidden"
+      >
+        <ul class="page-x border-t border-ink/15 pt-2">
+          <li v-for="link in links" :key="link.to" class="border-b border-ink/10">
             <RouterLink
-              v-for="link in links"
-              :key="link.to"
+              ref="firstLink"
               :to="link.to"
-              @click="closeMenu"
-              class="font-body text-forest-200 hover:text-cream hover:bg-forest-800 px-4 py-3 rounded-lg transition-colors"
-              :class="{ 'text-cream bg-forest-800': route.path === link.to }"
+              class="display flex items-center justify-between py-4 text-[2.5rem]"
+              :class="isActive(link.to) ? 'text-leaf-700' : 'text-ink'"
+              :aria-current="isActive(link.to) ? 'page' : undefined"
             >
               {{ link.label }}
+              <svg v-if="isActive(link.to)" class="h-6 w-6" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21V9M12 13c-4 0-6-3-6-6 3 0 6 2 6 6zm0-2c0-4 3-6 7-6 0 4-3 6-7 6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              </svg>
             </RouterLink>
-            <RouterLink
-              to="/contact"
-              @click="closeMenu"
-              class="btn-earth text-center mt-2 mx-0 py-3 rounded-lg"
-            >
-              Book a Consultation
-            </RouterLink>
-          </div>
+          </li>
+        </ul>
+        <div class="page-x py-6">
+          <RouterLink to="/contact#book" class="btn-rust w-full">Book a free chat</RouterLink>
+          <p class="mt-5 text-ink-soft">
+            Or email <a href="mailto:penny@patch-a-mumma.co.uk" class="link text-ink">penny@patch-a-mumma.co.uk</a>
+          </p>
         </div>
-      </Transition>
+        <GardenBand layout="compact" :seed="5" :plates="false" class="mt-auto shrink-0" />
+      </div>
+    </Transition>
+  </header>
+
+  <!-- Phones: booking is always one tap away once the hero has scrolled off -->
+  <Transition name="rise">
+    <div
+      v-if="showBar && !menuOpen && route.path !== '/contact'"
+      class="fixed inset-x-0 bottom-0 z-40 border-t border-ink/15 bg-paper/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur-[2px] md:hidden"
+    >
+      <RouterLink to="/contact#book" class="btn-rust w-full">Book a free chat</RouterLink>
     </div>
-  </nav>
+  </Transition>
 </template>
 
 <style scoped>
-.mobile-menu-enter-active,
-.mobile-menu-leave-active {
-  transition: all 0.25s ease;
+.drop-enter-active,
+.drop-leave-active {
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.mobile-menu-enter-from,
-.mobile-menu-leave-to {
+.drop-enter-from,
+.drop-leave-to {
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+}
+.rise-enter-active,
+.rise-leave-active {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+}
+.rise-enter-from,
+.rise-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .drop-enter-active,
+  .drop-leave-active,
+  .rise-enter-active,
+  .rise-leave-active {
+    transition: none;
+  }
 }
 </style>

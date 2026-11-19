@@ -1,121 +1,129 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import PageHero from '../components/shared/PageHero.vue'
+import TwoTomatoes from '../components/art/TwoTomatoes.vue'
+import StrataEdge from '../components/art/StrataEdge.vue'
+import SoilFill from '../components/art/SoilFill.vue'
 
 const values = [
   {
-    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    glyph: 'community',
     title: 'Community',
-    description: 'Food grows better when we grow it together. We love connecting growers, sharing knowledge, and building neighbourhoods where people help each other eat well.',
+    description:
+      'Food grows better when we grow it together. We love connecting growers, sharing knowledge, and building neighbourhoods where people help each other eat well.',
   },
   {
-    icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+    glyph: 'compost',
     title: 'Sustainability',
-    description: 'Every seed we plant is a vote for the kind of food system we want. We use organic practices, build soil health, and compost everything — because the land gives back what you put in.',
+    description:
+      'Every seed we plant is a vote for the kind of food system we want. We use organic practices, build soil health, and compost everything, because the land gives back what you put in.',
   },
   {
-    icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+    glyph: 'book',
     title: 'Education',
-    description: 'We don\'t just build gardens — we teach you how to use them. Every visit is a chance to share a little more knowledge, so you feel more confident and connected to what you\'re growing.',
+    description:
+      "We don't just build gardens, we teach you how to use them. Every visit is a chance to share a little more knowledge, so you feel more confident and connected to what you're growing.",
   },
   {
-    icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+    glyph: 'basket',
     title: 'Abundance',
-    description: 'There is always more than enough when you grow your own. We help people experience the incredible feeling of eating food they\'ve grown themselves — and sharing it with the people they love.',
+    description:
+      "There is always more than enough when you grow your own. We help people experience the incredible feeling of eating food they've grown themselves, and sharing it with the people they love.",
   },
 ]
 </script>
 
 <template>
   <div>
-    <PageHero
-      title="About Us"
-      subtitle="Why we started, and what drives us."
-      image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80"
-    />
+    <PageHero title="About us" subtitle="Why we started, and what drives us." :seed="7" />
 
-    <!-- Story section -->
-    <section class="py-20 bg-cream">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <!-- Image -->
-          <div class="relative">
-            <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
-              <img
-                src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"
-                alt="Tending a kitchen garden"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="absolute -top-4 -right-4 bg-earth-100 rounded-2xl p-5 shadow-lg max-w-[180px]">
-              <p class="font-heading text-3xl font-bold text-earth-900">50+</p>
-              <p class="font-body text-sm text-earth-700 mt-1">Gardens planted and thriving</p>
-            </div>
-          </div>
-
-          <!-- Text -->
-          <div>
-            <p class="font-body text-sm font-bold text-forest-700 uppercase tracking-widest mb-3">Our Story</p>
-            <h2 class="font-heading text-4xl md:text-5xl font-bold text-bark leading-tight mb-6">
-              It started with a<br />
-              <span class="italic text-forest-800">questionable tomato.</span>
-            </h2>
-            <div class="space-y-4 font-body text-bark/80 leading-relaxed text-lg">
-              <p>
-                Like most people, we grew up trusting that the food in supermarkets was safe, fresh, and honestly
-                labelled. Then, gradually, we started asking questions we couldn't unask. About pesticides.
-                About ultra-processing. About how far a vegetable travels before it reaches your plate.
-              </p>
-              <p>
-                We decided to do something about it — in our own backyard, first. Then in our neighbours'.
-                Then further. Patch A Mumma grew out of that simple impulse: help people grow real food,
-                close to home, with their own hands.
-              </p>
-              <p>
-                We're not here to preach or make anyone anxious. We're here to make growing your own food
-                feel achievable, joyful, and genuinely delicious. One patch at a time.
-              </p>
-            </div>
+    <section class="py-16 md:py-24" aria-labelledby="story-title">
+      <div class="page-x grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+        <div class="lg:col-span-6">
+          <h2 id="story-title" class="display text-[3rem] md:text-[4.25rem]">
+            It started with a <span class="text-tomato">questionable tomato.</span>
+          </h2>
+          <div class="mt-8 max-w-[62ch] space-y-5 text-[1.125rem] leading-relaxed text-ink-soft">
+            <p>
+              Like most people, we grew up trusting that the food in supermarkets was safe, fresh, and honestly
+              labelled. Then, gradually, we started asking questions we couldn't unask. About pesticides. About
+              ultra-processing. About how far a vegetable travels before it reaches your plate.
+            </p>
+            <p>
+              We decided to do something about it, in our own back garden first. Then in our neighbours'. Then further.
+              Patch A Mumma grew out of that simple impulse: help people grow real food, close to home, with their own
+              hands.
+            </p>
+            <p>
+              We're not here to preach or make anyone anxious. We're here to make growing your own food feel
+              achievable, joyful, and genuinely delicious. One patch at a time.
+            </p>
           </div>
         </div>
+        <figure class="lg:col-span-6">
+          <TwoTomatoes />
+          <figcaption class="mt-3 grid grid-cols-2 gap-4 text-center text-[0.9375rem] font-semibold text-ink-soft">
+            <span>Grown where? Sprayed with what?</span>
+            <span>Grown here. Nothing added.</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- Values section -->
-    <section class="py-20 bg-cream-dark">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-14">
-          <p class="font-body text-sm font-bold text-forest-700 uppercase tracking-widest mb-3">What We Stand For</p>
-          <h2 class="font-heading text-4xl md:text-5xl font-bold text-bark leading-tight">Our Values</h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div
-            v-for="value in values"
-            :key="value.title"
-            class="bg-white rounded-2xl p-7 text-center shadow-sm hover:shadow-md transition-shadow border border-cream-dark"
-          >
-            <div class="w-14 h-14 bg-forest-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-              <svg class="w-7 h-7 text-forest-800" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" :d="value.icon" />
-              </svg>
+    <section class="bg-paper-deep py-16 md:py-24" aria-labelledby="values-title">
+      <div class="page-x">
+        <h2 id="values-title" class="display text-[3rem] md:text-[4.25rem]">What we stand for</h2>
+        <ul class="mt-10 grid gap-x-12 border-t-2 border-ink md:mt-14 md:grid-cols-2">
+          <li v-for="v in values" :key="v.title" class="grid grid-cols-[3.5rem_1fr] gap-5 border-b border-ink/15 py-8">
+            <svg viewBox="0 0 56 56" class="h-14 w-14" aria-hidden="true" fill="none" stroke="#173D1F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <g v-if="v.glyph === 'community'">
+                <path d="M6 46c2-8 8-12 14-12s12 4 14 12" fill="#8DBF5A" />
+                <circle cx="20" cy="24" r="6" fill="#E9B160" />
+                <path d="M26 46c2-7 7-10 12-10s10 3 12 10" fill="#4E8E35" />
+                <circle cx="38" cy="28" r="5" fill="#E9B160" />
+                <path d="M28 14v-6m0 3c-3 0-4-2-4-4 3 0 4 2 4 4zm0-1c0-3 2-4 4-4 0 3-2 4-4 4z" fill="#8DBF5A" />
+              </g>
+              <g v-else-if="v.glyph === 'compost'">
+                <path d="M6 46c4-16 14-24 22-24s18 8 22 24z" fill="#3A2518" />
+                <path d="M16 36c4 1 6-2 10-1M30 40c4 0 6-3 10-2M22 44c3 0 5-2 8-1" stroke="#C08A3E" />
+                <path d="M24 20c-2-6 2-10 6-10M30 22l4-8M20 24l-6-6" stroke="#4E8E35" stroke-width="2" />
+                <path d="M2 46h52" />
+              </g>
+              <g v-else-if="v.glyph === 'book'">
+                <path d="M6 16c8-3 16-3 22 2 6-5 14-5 22-2v28c-8-3-16-3-22 2-6-5-14-5-22-2z" fill="#FAF9F4" />
+                <path d="M28 18v28" />
+                <path d="M11 24h12M11 30h12M33 24h12M33 30h10" stroke="#8B989D" stroke-width="1.2" />
+                <path d="M28 14V6m0 4c-3 0-5-2-5-5 3 0 5 2 5 5zm0-2c0-3 2-5 5-5 0 3-2 5-5 5z" fill="#8DBF5A" />
+              </g>
+              <g v-else>
+                <path d="M6 26h44l-5 22H11z" fill="#C9A26B" />
+                <path d="M10 32h36M12 40h32M18 26l2 22M28 26v22M38 26l-2 22" stroke-width="1" />
+                <path d="M16 26c0-14 24-14 24 0" />
+                <circle cx="18" cy="22" r="6" fill="#D8432E" />
+                <path d="M26 24c0-8 6-12 10-10-1 6-5 10-10 10z" fill="#4E8E35" />
+                <path d="M36 25l8-14 3 2-6 13z" fill="#E87A24" />
+              </g>
+            </svg>
+            <div>
+              <h3 class="condensed text-[1.75rem]">{{ v.title }}</h3>
+              <p class="mt-2 max-w-[52ch] leading-relaxed text-ink-soft">{{ v.description }}</p>
             </div>
-            <h3 class="font-heading text-xl font-bold text-bark mb-3">{{ value.title }}</h3>
-            <p class="font-body text-sm text-bark/70 leading-relaxed">{{ value.description }}</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- Mission banner -->
-    <section class="py-16 bg-forest-900 text-center">
-      <div class="max-w-3xl mx-auto px-4">
-        <p class="font-heading text-2xl md:text-3xl italic text-forest-200/90 leading-relaxed mb-8">
-          "A vegetable patch in your backyard isn't just a garden — it's a quiet act of independence."
-        </p>
-        <RouterLink to="/contact" class="btn-earth py-4 px-10 rounded-full text-base">
-          Start Growing With Us
-        </RouterLink>
+    <section aria-labelledby="quote-title">
+      <StrataEdge top="#F1EFE6" bottom="#3A2518" :seed="61" line="#2A1A10" />
+      <div class="relative overflow-hidden text-paper">
+        <SoilFill kind="topsoil" :seed="44" />
+        <div class="page-x relative py-16 md:py-24">
+          <h2 id="quote-title" class="sr-only">Our belief</h2>
+          <blockquote class="display max-w-[22ch] text-[2.75rem] text-paper md:text-[4.5rem]">
+            “A vegetable patch in your back garden isn't just a garden. It's a quiet act of independence.”
+          </blockquote>
+          <RouterLink to="/contact#book" class="btn-rust mt-10">Start growing with us</RouterLink>
+        </div>
       </div>
     </section>
   </div>

@@ -4,33 +4,130 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
   body {
-    @apply bg-cream font-body text-bark;
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  ::selection {
+    background: #8dbf5a;
+    color: #10291c;
+  }
+  /* Two-tone focus ring: an ink ring hugging the control and a paper ring
+     outside it, so one of the two always clears 3:1 on paper and on soil. */
+  :focus-visible {
+    outline: 3px solid #faf9f4;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #10291c;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+    .group:hover .group-hover\:-translate-y-0\.5,
+    .group:hover .group-hover\:translate-x-1,
+    .group:hover .group-hover\:-rotate-6 {
+      transform: none !important;
+    }
+  }
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1.5px;
+  }
+  /* Scrollbar in the soil palette */
+  html {
+    scrollbar-color: #4b3223 #f1efe6;
+  }
+  ::-webkit-scrollbar {
+    width: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1efe6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4b3223;
+    border: 3px solid #f1efe6;
+    border-radius: 6px;
   }
 }
 
 @layer components {
-  .btn-forest {
-    @apply bg-forest-800 text-cream font-body font-bold tracking-wide hover:bg-forest-700 transition-colors duration-200 inline-block text-center;
+  /* Heavy condensed display voice */
+  .display {
+    font-stretch: 62.5%;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.9;
+    text-wrap: balance;
   }
-  .btn-earth {
-    @apply bg-earth-900 text-cream font-body font-bold tracking-wide hover:bg-earth-700 transition-colors duration-200 inline-block text-center;
+  /* Condensed but mixed-case, for sub-headings and plates */
+  .condensed {
+    font-stretch: 72%;
+    font-weight: 750;
+    letter-spacing: -0.005em;
+    line-height: 1.02;
   }
-  .btn-outline-light {
-    @apply border-2 border-cream text-cream font-body font-bold tracking-wide hover:bg-cream hover:text-forest-900 transition-colors duration-200 inline-block text-center;
+  .figures {
+    font-variant-numeric: tabular-nums lining-nums;
   }
-  .btn-outline-dark {
-    @apply border-2 border-forest-800 text-forest-800 font-body font-bold tracking-wide hover:bg-forest-800 hover:text-cream transition-colors duration-200 inline-block text-center;
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 rounded-none px-6 py-4 text-[1.0625rem] font-bold leading-none transition-colors duration-200;
+    min-height: 3.25rem;
   }
+  .btn-rust {
+    @apply btn bg-rust text-white hover:bg-rust-dark;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-paper hover:bg-leaf-900;
+  }
+  .btn-line {
+    @apply btn border-2 border-ink text-ink hover:bg-ink hover:text-paper;
+  }
+  .link {
+    @apply font-semibold underline decoration-2 underline-offset-[0.22em] transition-colors;
+  }
+
+  .page-x {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  /* Survey annotation: small caps label with tabular figures */
+  .annot {
+    @apply text-[0.8125rem] font-semibold tracking-[0.06em] uppercase;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Dormant states: plants not yet planted, drawn as dashed ghosts */
+.ghost path {
+  fill: none !important;
+  stroke: #8b989d !important;
+  stroke-dasharray: 3 3;
 }
 
 .page-fade-enter-active,
 .page-fade-leave-active {
-  transition: opacity 0.25s ease;
+  transition: opacity 0.22s ease;
 }
 .page-fade-enter-from,
 .page-fade-leave-to {
   opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-fade-enter-active,
+  .page-fade-leave-active {
+    transition: none;
+  }
 }

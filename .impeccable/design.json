@@ -1,0 +1,842 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T12:36:15.962Z",
+  "title": "Design System: Patch A Mumma",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Survey Paper",
+        "canonical": "#FAF9F4",
+        "oklch": "oklch(98.2% 0.007 97.4)",
+        "tonalRamp": [
+          "#121211",
+          "#2C2B29",
+          "#484844",
+          "#676662",
+          "#878682",
+          "#A8A8A4",
+          "#CBCAC8",
+          "#EEEEEE"
+        ]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Paper Deep",
+        "canonical": "#F1EFE6",
+        "oklch": "oklch(95.1% 0.012 96.4)",
+        "tonalRamp": [
+          "#121210",
+          "#2C2B28",
+          "#494842",
+          "#68665E",
+          "#88867E",
+          "#A9A8A1",
+          "#CBCAC6",
+          "#EFEEED"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Field Ink",
+        "canonical": "#10291C",
+        "oklch": "oklch(25.6% 0.040 159.0)",
+        "tonalRamp": [
+          "#0E1310",
+          "#222F27",
+          "#384E41",
+          "#536D5E",
+          "#728E7D",
+          "#98AEA1",
+          "#C1CEC6",
+          "#EBF0ED"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#3E5546",
+        "oklch": "oklch(42.6% 0.038 155.9)",
+        "tonalRamp": [
+          "#0F1310",
+          "#232E27",
+          "#3A4D40",
+          "#556D5D",
+          "#758D7D",
+          "#9AADA0",
+          "#C2CEC6",
+          "#ECF0ED"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink",
+        "canonical": "#6B7A6F",
+        "oklch": "oklch(56.4% 0.024 153.7)",
+        "tonalRamp": [
+          "#101210",
+          "#262D28",
+          "#3F4B43",
+          "#5C6A60",
+          "#7B8B7F",
+          "#9FABA2",
+          "#C5CDC7",
+          "#EDEFED"
+        ]
+      },
+      "line-ink": {
+        "role": "neutral",
+        "displayName": "Line Ink",
+        "canonical": "#173D1F",
+        "oklch": "oklch(32.3% 0.068 148.3)",
+        "tonalRamp": [
+          "#0D140E",
+          "#1E3021",
+          "#315036",
+          "#4A7150",
+          "#6A926F",
+          "#92B196",
+          "#BDD1BF",
+          "#EAF0EB"
+        ]
+      },
+      "rust": {
+        "role": "primary",
+        "displayName": "Survey Rust",
+        "canonical": "#B23C1C",
+        "oklch": "oklch(52.1% 0.159 35.5)",
+        "tonalRamp": [
+          "#1F0B06",
+          "#4D1608",
+          "#812002",
+          "#AE3818",
+          "#D45B3C",
+          "#EA8A71",
+          "#F6BAAA",
+          "#FEE9E4"
+        ]
+      },
+      "rust-dark": {
+        "role": "primary",
+        "displayName": "Kiln Rust",
+        "canonical": "#92301A",
+        "oklch": "oklch(45.2% 0.137 34.1)",
+        "tonalRamp": [
+          "#1D0C08",
+          "#491B10",
+          "#7A2917",
+          "#A5422C",
+          "#CB634C",
+          "#E28F7B",
+          "#F0BDB0",
+          "#FCEAE6"
+        ]
+      },
+      "rust-light": {
+        "role": "primary",
+        "displayName": "Rust Wash",
+        "canonical": "#F3D9CF",
+        "oklch": "oklch(90.4% 0.032 42.3)",
+        "tonalRamp": [
+          "#15110F",
+          "#332925",
+          "#55433C",
+          "#776058",
+          "#988077",
+          "#B6A39C",
+          "#D3C8C3",
+          "#F1EDEC"
+        ]
+      },
+      "humus": {
+        "role": "tertiary",
+        "displayName": "Topsoil Umber",
+        "canonical": "#3A2518",
+        "oklch": "oklch(28.7% 0.039 52.3)",
+        "tonalRamp": [
+          "#15110E",
+          "#342922",
+          "#574337",
+          "#796052",
+          "#9A8071",
+          "#B8A397",
+          "#D5C8C0",
+          "#F2EDEB"
+        ]
+      },
+      "humus-light": {
+        "role": "tertiary",
+        "displayName": "Loam",
+        "canonical": "#4B3223",
+        "oklch": "oklch(34.3% 0.044 51.7)",
+        "tonalRamp": [
+          "#15100E",
+          "#352820",
+          "#584235",
+          "#7B5F4F",
+          "#9C7F6E",
+          "#BAA295",
+          "#D6C7BF",
+          "#F2EDEA"
+        ]
+      },
+      "humus-dark": {
+        "role": "tertiary",
+        "displayName": "Deep Humus",
+        "canonical": "#2A1A10",
+        "oklch": "oklch(23.6% 0.031 52.7)",
+        "tonalRamp": [
+          "#14110F",
+          "#322924",
+          "#54443A",
+          "#756156",
+          "#968175",
+          "#B5A49A",
+          "#D3C8C2",
+          "#F1EEEC"
+        ]
+      },
+      "bedrock": {
+        "role": "tertiary",
+        "displayName": "Bedrock",
+        "canonical": "#241710",
+        "oklch": "oklch(21.9% 0.025 49.3)",
+        "tonalRamp": [
+          "#14110F",
+          "#312925",
+          "#52453E",
+          "#73625A",
+          "#938279",
+          "#B2A49D",
+          "#D1C8C4",
+          "#F1EEEC"
+        ]
+      },
+      "clay": {
+        "role": "tertiary",
+        "displayName": "Clay Ochre",
+        "canonical": "#C08A3E",
+        "oklch": "oklch(67.2% 0.113 72.9)",
+        "tonalRamp": [
+          "#191005",
+          "#3E2600",
+          "#673D00",
+          "#8D5A00",
+          "#AF7A2C",
+          "#C99F69",
+          "#E0C6A6",
+          "#F6EDE2"
+        ]
+      },
+      "clay-dark": {
+        "role": "tertiary",
+        "displayName": "Burnt Clay",
+        "canonical": "#9C6A2A",
+        "oklch": "oklch(56.5% 0.102 69.5)",
+        "tonalRamp": [
+          "#181006",
+          "#3D2607",
+          "#653E00",
+          "#8B5A16",
+          "#AD7A3C",
+          "#C89F71",
+          "#DFC6AB",
+          "#F5EDE4"
+        ]
+      },
+      "chalk": {
+        "role": "tertiary",
+        "displayName": "Chalk",
+        "canonical": "#ECE6D7",
+        "oklch": "oklch(92.6% 0.021 88.7)",
+        "tonalRamp": [
+          "#12110F",
+          "#2E2B25",
+          "#4C473D",
+          "#6B6659",
+          "#8B8678",
+          "#ACA79C",
+          "#CDCAC4",
+          "#EFEEEC"
+        ]
+      },
+      "gley": {
+        "role": "tertiary",
+        "displayName": "Gley Grey",
+        "canonical": "#8B989D",
+        "oklch": "oklch(67.1% 0.017 222.8)",
+        "tonalRamp": [
+          "#101213",
+          "#272C2F",
+          "#404A4D",
+          "#5C686D",
+          "#7C898E",
+          "#9FAAAE",
+          "#C5CCCE",
+          "#EDEFF0"
+        ]
+      },
+      "topsoil-cream": {
+        "role": "neutral",
+        "displayName": "Topsoil Cream",
+        "canonical": "#F3EAD6",
+        "oklch": "oklch(93.9% 0.028 86.6)",
+        "tonalRamp": [
+          "#13110E",
+          "#2F2B23",
+          "#4D4739",
+          "#6D6554",
+          "#8E8573",
+          "#AEA799",
+          "#CECAC1",
+          "#F0EEEB"
+        ]
+      },
+      "bedrock-text": {
+        "role": "neutral",
+        "displayName": "Bedrock Parchment",
+        "canonical": "#E9DFC9",
+        "oklch": "oklch(90.6% 0.031 86.5)",
+        "tonalRamp": [
+          "#13110E",
+          "#2F2B22",
+          "#4E4737",
+          "#6E6552",
+          "#8E8571",
+          "#AEA797",
+          "#CFCAC0",
+          "#F0EEEB"
+        ]
+      },
+      "bedrock-muted": {
+        "role": "neutral",
+        "displayName": "Bedrock Dust",
+        "canonical": "#CDBFA3",
+        "oklch": "oklch(80.9% 0.041 84.6)",
+        "tonalRamp": [
+          "#14110D",
+          "#312B1F",
+          "#514632",
+          "#71644B",
+          "#92856A",
+          "#B1A792",
+          "#D0CABD",
+          "#F0EEEA"
+        ]
+      },
+      "horizon-rule": {
+        "role": "neutral",
+        "displayName": "Horizon Rule",
+        "canonical": "#C9BFA9",
+        "oklch": "oklch(80.7% 0.032 86.5)",
+        "tonalRamp": [
+          "#13110E",
+          "#2F2B22",
+          "#4E4737",
+          "#6E6551",
+          "#8F8571",
+          "#AEA796",
+          "#CFCAC0",
+          "#F0EEEB"
+        ]
+      },
+      "field-white": {
+        "role": "neutral",
+        "displayName": "Field White",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#121212",
+          "#2B2B2B",
+          "#484848",
+          "#666666",
+          "#868686",
+          "#A8A8A8",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "leaf-700": {
+        "role": "secondary",
+        "displayName": "Leaf Ink",
+        "canonical": "#2F6B2A",
+        "oklch": "oklch(47.2% 0.116 142.1)",
+        "tonalRamp": [
+          "#173D1F",
+          "#2F6B2A",
+          "#4E8E35",
+          "#8DBF5A",
+          "#DDEBC4"
+        ]
+      },
+      "leaf-500": {
+        "role": "secondary",
+        "displayName": "Growth Green",
+        "canonical": "#4E8E35",
+        "oklch": "oklch(58.4% 0.140 138.0)",
+        "tonalRamp": [
+          "#173D1F",
+          "#2F6B2A",
+          "#4E8E35",
+          "#8DBF5A",
+          "#DDEBC4"
+        ]
+      },
+      "leaf-300": {
+        "role": "secondary",
+        "displayName": "Spring Leaf",
+        "canonical": "#8DBF5A",
+        "oklch": "oklch(74.7% 0.142 130.9)",
+        "tonalRamp": [
+          "#173D1F",
+          "#2F6B2A",
+          "#4E8E35",
+          "#8DBF5A",
+          "#DDEBC4"
+        ]
+      },
+      "leaf-100": {
+        "role": "secondary",
+        "displayName": "Leaf Wash",
+        "canonical": "#DDEBC4",
+        "oklch": "oklch(91.9% 0.054 123.5)",
+        "tonalRamp": [
+          "#173D1F",
+          "#2F6B2A",
+          "#4E8E35",
+          "#8DBF5A",
+          "#DDEBC4"
+        ]
+      },
+      "stem": {
+        "role": "tertiary",
+        "displayName": "Vine Stem",
+        "canonical": "#3F7A2E",
+        "oklch": "oklch(52.2% 0.126 139.2)",
+        "tonalRamp": [
+          "#0B1508",
+          "#183310",
+          "#245515",
+          "#3C772A",
+          "#5C984C",
+          "#88B77C",
+          "#B8D4B1",
+          "#E8F2E6"
+        ]
+      },
+      "cane": {
+        "role": "tertiary",
+        "displayName": "Bean Cane",
+        "canonical": "#B58A4E",
+        "oklch": "oklch(66.2% 0.094 74.2)",
+        "tonalRamp": [
+          "#171007",
+          "#3A270A",
+          "#614008",
+          "#865D1E",
+          "#A87D41",
+          "#C3A175",
+          "#DCC7AC",
+          "#F4EDE4"
+        ]
+      },
+      "board": {
+        "role": "tertiary",
+        "displayName": "Scaffold Board",
+        "canonical": "#C9A26B",
+        "oklch": "oklch(73.5% 0.086 75.3)",
+        "tonalRamp": [
+          "#171008",
+          "#39280E",
+          "#5E4112",
+          "#825E27",
+          "#A47F48",
+          "#C0A279",
+          "#DAC8AF",
+          "#F4EDE5"
+        ]
+      },
+      "seed": {
+        "role": "tertiary",
+        "displayName": "Seed Ochre",
+        "canonical": "#E9B160",
+        "oklch": "oklch(79.6% 0.118 74.8)",
+        "tonalRamp": [
+          "#191004",
+          "#3E2600",
+          "#673D00",
+          "#8D5A00",
+          "#AF7A23",
+          "#CA9F65",
+          "#E0C6A4",
+          "#F6EDE2"
+        ]
+      },
+      "tomato": {
+        "role": "tertiary",
+        "displayName": "Tomato",
+        "canonical": "#D8432E",
+        "oklch": "oklch(59.5% 0.189 31.1)",
+        "tonalRamp": [
+          "#210906",
+          "#530D05",
+          "#8A0500",
+          "#BA220D",
+          "#E14C36",
+          "#F5816D",
+          "#FEB6A8",
+          "#FFE8E3"
+        ]
+      },
+      "bean": {
+        "role": "tertiary",
+        "displayName": "Bean Flower Scarlet",
+        "canonical": "#D93A2B",
+        "oklch": "oklch(58.7% 0.198 29.6)",
+        "tonalRamp": [
+          "#220806",
+          "#550905",
+          "#8D0000",
+          "#BD170C",
+          "#E54636",
+          "#F97E6D",
+          "#FFB5A8",
+          "#FFE8E3"
+        ]
+      },
+      "squash": {
+        "role": "tertiary",
+        "displayName": "Squash Flower",
+        "canonical": "#E8A33A",
+        "oklch": "oklch(76.5% 0.142 73.5)",
+        "tonalRamp": [
+          "#1A0F02",
+          "#412300",
+          "#6D3900",
+          "#955500",
+          "#B87600",
+          "#D19D55",
+          "#E5C59C",
+          "#F7EDDF"
+        ]
+      },
+      "carrot": {
+        "role": "tertiary",
+        "displayName": "Carrot",
+        "canonical": "#E87A24",
+        "oklch": "oklch(69.2% 0.163 52.6)",
+        "tonalRamp": [
+          "#1E0C03",
+          "#4B1A00",
+          "#7E2800",
+          "#AA4100",
+          "#CF6300",
+          "#E59058",
+          "#F2BE9E",
+          "#FDEAE0"
+        ]
+      },
+      "beet": {
+        "role": "tertiary",
+        "displayName": "Beetroot",
+        "canonical": "#8E1F45",
+        "oklch": "oklch(43.4% 0.148 5.6)",
+        "tonalRamp": [
+          "#1E0B0F",
+          "#4A1625",
+          "#7C203E",
+          "#A7385A",
+          "#CD5A79",
+          "#E4889D",
+          "#F2B9C4",
+          "#FDE9EC"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home hero and inner-page titles: Archivo at font-stretch 62.5%, weight 850, uppercase, 0.9 line-height, -0.01em, text-wrap balance. Hero 3.25 / 5 / 5.75rem; page titles 3.4 / 4.5 / 5.5rem.",
+        "implementation": ".display class in src/style.css"
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings (2.75-3.25rem phone, 3.5-4.75rem md), the About pull-quote, mobile menu links and the wordmark. Same recipe as Display.",
+        "implementation": ".display class"
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service, step and value names and small subheads: font-stretch 72%, weight 750, mixed case, 1.02 line-height.",
+        "implementation": ".condensed class"
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Services article price line: inline font-stretch 75%, weight 800, tabular lining figures. List-row prices are 700 at 1.0625-1.125rem in Leaf Ink."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Lead paragraphs in Soft Ink at 1.125rem / 1.625, held to 40-62ch; running copy 1rem; always normal width."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Every .btn label, 700 at 1.0625rem; nav buttons 0.9375rem."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Stratum names set on horizon lines: uppercase, 0.06em tracking, tabular, 0.75rem on strata.",
+        "implementation": ".annot class"
+      }
+    },
+    "shadows": [
+      {
+        "name": "plate-lift",
+        "value": "0 6px 14px -10px rgba(16,41,28,0.6)",
+        "purpose": "Only on the desktop name plates hung over the garden band."
+      },
+      {
+        "name": "bar-veil",
+        "value": "background: rgba(250,249,244,0.95); backdrop-filter: blur(2px)",
+        "purpose": "Phone sticky booking bar legibility veil; not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "grow-stems",
+        "value": "stroke-dashoffset 1 -> 0, 1.6s, power3.out, stagger amount 0.7s",
+        "purpose": "Garden band stems draw in on load (growIn)."
+      },
+      {
+        "name": "grow-roots",
+        "value": "stroke-dashoffset 1 -> 0, 1.28s, power3.out, stagger amount 0.5s, at 0.2s",
+        "purpose": "Roots draw down inside growIn."
+      },
+      {
+        "name": "grow-leaves",
+        "value": "scale 0 -> 1, transform-origin 0% 50%, 1.12s, power3.out, stagger amount 1.1s, at 0.25s",
+        "purpose": "Leaves unfurl from their base."
+      },
+      {
+        "name": "grow-fruit",
+        "value": "scale 0 -> 1, transform-origin 50% 50%, 0.96s, back.out(1.4), stagger amount 0.6s, at 0.9s",
+        "purpose": "Fruit swells. The slight overshoot diverges from the decelerating growth grammar; recorded as built, not a pattern to extend."
+      },
+      {
+        "name": "grow-when-seen",
+        "value": "growIn paused; ScrollTrigger start \"top 80%\", once",
+        "purpose": "Raised-bed stages grow on entry."
+      },
+      {
+        "name": "roots-on-scroll",
+        "value": "ease none, scrub 0.6, start \"top 95%\", end \"bottom 20%\" (hero)",
+        "purpose": "Hero roots reach down as the topsoil scrolls past."
+      },
+      {
+        "name": "rail-scrub",
+        "value": "ease none, scrub 0.8, start \"top 70-75%\", end \"bottom 85%\"",
+        "purpose": "Root rail and vine rail draw with scroll (vine leaves on power2.out)."
+      },
+      {
+        "name": "jar-fill",
+        "value": "scaleY 0 -> 1 from 50% 100%, 1.4s, power3.out, stagger 0.12s, once at \"top 80%\"",
+        "purpose": "Brine rises in the preserve jars."
+      },
+      {
+        "name": "page-fade",
+        "value": "opacity 220ms ease",
+        "purpose": "Route cross-fade."
+      },
+      {
+        "name": "menu-drop",
+        "value": "opacity 200ms ease; translateY(-6px) 250ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Phone menu sheet."
+      },
+      {
+        "name": "bar-rise",
+        "value": "translateY(100%) 300ms cubic-bezier(0.22, 1, 0.36, 1); opacity 200ms",
+        "purpose": "Phone booking bar after 520px of scroll."
+      },
+      {
+        "name": "button-colour",
+        "value": "background-color, color 200ms",
+        "purpose": "Button hover."
+      },
+      {
+        "name": "photo-zoom",
+        "value": "scale 1.03, 700ms ease-out",
+        "purpose": "Gallery photo hover; disabled under reduced motion."
+      },
+      {
+        "name": "reduced-motion-gate",
+        "value": "gsap.matchMedia(scope).add('(prefers-reduced-motion: no-preference)', setup); mm.revert() on unmount",
+        "purpose": "All GSAP motion. CSS transitions, smooth scroll and router smooth scrolling are also disabled under reduce. Hover nudges (glyph -2px, arrow +4px, sprout -6deg) and colour transitions are not gated."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "note": "Desktop nav; garden band swaps to its desktop composition."
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "note": "Name plates and the hero root spread appear."
+      },
+      {
+        "name": "rails",
+        "value": "1400px",
+        "note": "Root rail and vine rail appear in the margins."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (rust)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action colour: every booking call to action, full width on phones.",
+      "html": "<a class=\"ds-btn-rust\" href=\"#\">Book a free chat <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11m-4-4 4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn-rust { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 24px; border-radius: 0; font-family: Archivo, system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; line-height: 1; text-decoration: none; cursor: pointer; transition: background-color 200ms, color 200ms; background: #B23C1C; color: #FFFFFF; border: none; } .ds-btn-rust:hover { background: #92301A; } .ds-btn-rust:focus-visible { outline: 3px solid #B23C1C; outline-offset: 3px; } .ds-btn-rust svg { width: 20px; height: 20px; }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Form submission only; dims to 70% with a wait cursor while sending.",
+      "html": "<button class=\"ds-btn-ink\" type=\"button\">Send message</button>",
+      "css": ".ds-btn-ink { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 24px; border-radius: 0; font-family: Archivo, system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; line-height: 1; text-decoration: none; cursor: pointer; transition: background-color 200ms, color 200ms; padding: 16px 40px; background: #10291C; color: #FAF9F4; border: none; } .ds-btn-ink:hover { background: #173D1F; } .ds-btn-ink:focus-visible { outline: 3px solid #B23C1C; outline-offset: 3px; } .ds-btn-ink:disabled { opacity: 0.7; cursor: wait; }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action and the phone Menu toggle: a 2px ink outline that fills on hover.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Browse services</a>",
+      "css": ".ds-btn-line { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 24px; border-radius: 0; font-family: Archivo, system-ui, sans-serif; font-size: 1.0625rem; font-weight: 700; line-height: 1; text-decoration: none; cursor: pointer; transition: background-color 200ms, color 200ms; background: transparent; color: #10291C; border: 2px solid #10291C; } .ds-btn-line:hover { background: #10291C; color: #FAF9F4; } .ds-btn-line:focus-visible { outline: 3px solid #B23C1C; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Square white field with a 2px ink border; label above with required/optional in soft ink.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-name\" class=\"ds-field-label\">Your name <span>(required)</span></label><input id=\"ds-name\" class=\"ds-input\" type=\"text\" placeholder=\"Jane Smith\"></div>",
+      "css": ".ds-field { font-family: Archivo, system-ui, sans-serif; color: #10291C; } .ds-field-label { display: block; margin-bottom: 8px; font-weight: 700; } .ds-field-label span { font-weight: 400; color: #3E5546; } .ds-input { width: 100%; box-sizing: border-box; border-radius: 0; border: 2px solid rgba(16,41,28,0.4); background: #FFFFFF; padding: 14px 16px; font-family: Archivo, system-ui, sans-serif; font-size: 1.0625rem; color: #10291C; transition: border-color 150ms; } .ds-input::placeholder { color: #6B7A6F; } .ds-input:hover { border-color: rgba(16,41,28,0.7); } .ds-input:focus { outline: none; border-color: #10291C; } .ds-input:focus-visible { outline: 3px solid #B23C1C; outline-offset: 2px; }"
+    },
+    {
+      "name": "Main Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "64px paper bar: sprout mark and condensed wordmark, soft-ink links, leaf underline on the current page, compact rust booking button.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a class=\"ds-nav-brand\" href=\"#\"><svg viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" aria-hidden=\"true\"><path d=\"M3 25.5h26\" stroke=\"#173D1F\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M16 25V14\" stroke=\"#173D1F\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M16 16c-1-5-5.5-7.5-10-7 .3 4.6 4.4 7.6 10 7z\" fill=\"#2F6B2A\" stroke=\"#173D1F\" stroke-width=\"1.4\" stroke-linejoin=\"round\"/><path d=\"M16 14.5c.6-5.4 5-8.6 10.5-8.3-.2 5.2-4.6 8.6-10.5 8.3z\" fill=\"#8DBF5A\" stroke=\"#173D1F\" stroke-width=\"1.4\" stroke-linejoin=\"round\"/><ellipse cx=\"16\" cy=\"28.4\" rx=\"3.1\" ry=\"1.9\" fill=\"#E9B160\" stroke=\"#173D1F\" stroke-width=\"1.2\"/></svg><span>Patch A Mumma</span></a><ul><li><a href=\"#\" aria-current=\"page\">Home</a></li><li><a href=\"#\">Services</a></li><li><a href=\"#\">About</a></li><li><a href=\"#\">Contact</a></li><li><a class=\"ds-nav-cta\" href=\"#\">Book a free chat</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; padding: 0 32px; background: #FAF9F4; border-bottom: 1px solid rgba(16,41,28,0.15); font-family: Archivo, system-ui, sans-serif; } .ds-nav-brand { display: flex; align-items: center; gap: 8px; color: #10291C; text-decoration: none; } .ds-nav-brand svg { transition: transform 300ms; } .ds-nav-brand:hover svg { transform: rotate(-6deg); } .ds-nav-brand span { font-stretch: 62.5%; font-weight: 850; text-transform: uppercase; font-size: 1.75rem; line-height: 1; letter-spacing: -0.005em; } .ds-nav ul { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; } .ds-nav ul a { position: relative; padding: 8px 0; font-size: 0.9375rem; font-weight: 600; color: #3E5546; text-decoration: none; transition: color 150ms; } .ds-nav ul a:hover, .ds-nav ul a[aria-current=page] { color: #10291C; } .ds-nav ul a[aria-current=page]::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 3px; border-radius: 9999px; background: #4E8E35; } .ds-nav a:focus-visible { outline: 3px solid #B23C1C; outline-offset: 3px; } .ds-nav ul a.ds-nav-cta { display: inline-flex; padding: 12px 20px; background: #B23C1C; color: #FFFFFF; font-weight: 700; transition: background-color 200ms; } .ds-nav ul a.ds-nav-cta:hover { background: #92301A; }"
+    },
+    {
+      "name": "Service Index Chip",
+      "kind": "chip",
+      "refersTo": "index-chip",
+      "description": "In-page jump links on Services: paper, 1px 30% ink border, 3px corners.",
+      "html": "<a class=\"ds-chip\" href=\"#\">Garden Design &amp; Planning</a>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 3px; border: 1px solid rgba(16,41,28,0.3); background: #FAF9F4; color: #10291C; font-family: Archivo, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background-color 150ms, border-color 150ms; } .ds-chip:hover { border-color: #10291C; background: #DDEBC4; } .ds-chip:focus-visible { outline: 3px solid #B23C1C; outline-offset: 3px; }"
+    },
+    {
+      "name": "Service Price Row",
+      "kind": "card",
+      "refersTo": "",
+      "description": "A plain price row in a list opened by a 2px ink rule: glyph, condensed title, short line, tabular leaf-ink price and arrow. Replaces service cards.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><svg class=\"ds-row-glyph\" viewBox=\"0 0 64 64\" aria-hidden=\"true\" fill=\"none\" stroke=\"#173D1F\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 40h52v13H6z\" fill=\"#C08A3E\"/><path d=\"M6 46h52M14 40v13M50 40v13\" stroke-width=\"1\"/><path d=\"M6 40c6-3 12-3 18-1s14 2 20-1 10-1 14 1\" fill=\"#3A2518\"/><path d=\"M17 39v-9m0 4c-3 0-5-2-5-5 3 0 5 2 5 5zm0-2c0-3 2-5 5-5 0 3-2 5-5 5zM32 39v-12m0 5c-4 0-6-3-6-6 4 0 6 3 6 6zm0-2c0-4 3-6 7-6 0 4-3 6-7 6zM46 39v-8m0 3c-3 0-4-2-4-4 3 0 4 2 4 4zm0-1c0-3 2-4 4-4 0 3-2 4-4 4z\" fill=\"#8DBF5A\"/><path d=\"M56 8v24\" stroke-width=\"2.2\"/><path d=\"M52 30h8l-1 8c-1 3-5 3-6 0z\" fill=\"#8B989D\"/><path d=\"M53 6h6\" stroke-width=\"2.4\"/></svg><span class=\"ds-row-title\">Installation &amp; Planting</span><span class=\"ds-row-text\">Raised beds built, soil prepared, first crops in the ground.</span><span class=\"ds-row-price\">Quote on request <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11m-4-4 4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows { list-style: none; margin: 0; padding: 0; border-top: 2px solid #10291C; font-family: Archivo, system-ui, sans-serif; } .ds-rows li { border-bottom: 1px solid rgba(16,41,28,0.2); } .ds-row { display: grid; grid-template-columns: 4.5rem minmax(0,1.1fr) minmax(0,1.4fr) auto; align-items: center; column-gap: 32px; padding: 28px 0; color: #10291C; text-decoration: none; } .ds-row-glyph { width: 64px; height: 64px; transition: transform 300ms; } .ds-row-title { font-stretch: 72%; font-weight: 750; font-size: 2rem; line-height: 1.02; letter-spacing: -0.005em; } .ds-row-text { font-size: 1.0625rem; line-height: 1.375; color: #3E5546; } .ds-row-price { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.125rem; color: #2F6B2A; white-space: nowrap; font-variant-numeric: tabular-nums lining-nums; } .ds-row-price svg { width: 20px; height: 20px; color: #10291C; transition: transform 300ms; } .ds-row:hover .ds-row-title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; } .ds-row:hover .ds-row-glyph { transform: translateY(-2px); } .ds-row:hover .ds-row-price svg { transform: translateX(4px); } .ds-row:focus-visible { outline: 3px solid #B23C1C; outline-offset: 3px; }"
+    },
+    {
+      "name": "Stratum Edge with Label",
+      "kind": "custom",
+      "refersTo": "stratum-label",
+      "description": "Signature divider: a wavy hand-drawn horizon filling the lower stratum under the upper one, with the stratum named plainly on the line.",
+      "html": "<div class=\"ds-strata\"><svg viewBox=\"0 0 1440 40\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M0 22 Q30 15 60 18 Q90 26 120 24 Q150 14 180 19 Q210 27 240 21 Q270 13 300 17 Q330 25 360 23 Q390 16 420 20 Q450 28 480 22 Q510 12 540 18 Q570 24 600 21 Q630 15 660 19 Q690 27 720 23 Q750 14 780 17 Q810 25 840 22 Q870 16 900 20 Q930 26 960 21 Q990 13 1020 18 Q1050 24 1080 22 Q1110 15 1140 19 Q1170 27 1200 23 Q1230 16 1260 18 Q1290 25 1320 21 Q1350 14 1380 19 Q1410 26 1440 22 L1440 40 L0 40 Z\" fill=\"#C08A3E\"/><path d=\"M0 22 Q30 15 60 18 Q90 26 120 24 Q150 14 180 19 Q210 27 240 21 Q270 13 300 17 Q330 25 360 23 Q390 16 420 20 Q450 28 480 22 Q510 12 540 18 Q570 24 600 21 Q630 15 660 19 Q690 27 720 23 Q750 14 780 17 Q810 25 840 22 Q870 16 900 20 Q930 26 960 21 Q990 13 1020 18 Q1050 24 1080 22 Q1110 15 1140 19 Q1170 27 1200 23 Q1230 16 1260 18 Q1290 25 1320 21 Q1350 14 1380 19 Q1410 26 1440 22\" fill=\"none\" stroke=\"#2A1A10\" stroke-width=\"1.5\" vector-effect=\"non-scaling-stroke\"/></svg><span class=\"ds-strata-label\">Clay subsoil</span></div>",
+      "css": ".ds-strata { position: relative; } .ds-strata svg { display: block; width: 100%; height: 32px; background: #3A2518; } .ds-strata-label { position: absolute; right: 32px; top: 50%; transform: translateY(-50%); padding: 2px 8px; background: #FAF9F4; color: #3E5546; font-family: Archivo, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Name Plate",
+      "kind": "custom",
+      "refersTo": "name-plate",
+      "description": "Desktop crop plate hung over the garden band on a dashed leader: name, sow window, italic tip. The only shadowed element.",
+      "html": "<div class=\"ds-plate\"><span class=\"ds-plate-name\">Runner bean</span><span class=\"ds-plate-note\">Sow May to June</span><span class=\"ds-plate-tip\">Pick often and it keeps cropping</span></div>",
+      "css": ".ds-plate { display: inline-block; padding: 4px 8px; background: #FAF9F4; border: 1px solid rgba(16,41,28,0.8); text-align: center; line-height: 1.25; box-shadow: 0 6px 14px -10px rgba(16,41,28,0.6); font-family: Archivo, system-ui, sans-serif; } .ds-plate span { display: block; white-space: nowrap; } .ds-plate-name { font-size: 0.8125rem; font-weight: 700; color: #10291C; } .ds-plate-note { font-size: 0.75rem; color: #3E5546; } .ds-plate-tip { margin-top: 2px; padding-top: 2px; border-top: 1px solid rgba(16,41,28,0.15); font-size: 0.75rem; font-style: italic; color: #2F6B2A; }"
+    },
+    {
+      "name": "Crop Tag",
+      "kind": "chip",
+      "refersTo": "crop-tag",
+      "description": "Label set in the topsoil just under the ground line, beneath the crop it names.",
+      "html": "<div class=\"ds-soil\"><span class=\"ds-tag\">Tomato<span> · sow indoors Feb to Apr</span></span></div>",
+      "css": ".ds-soil { padding: 16px; background: #3A2518; } .ds-tag { display: inline-block; padding: 1px 6px; border: 1px solid #6B4A33; background: #2A1A10; color: #E9DFC9; font-family: Archivo, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; line-height: 1.25; white-space: nowrap; } .ds-tag span { font-weight: 400; color: #CDBFA3; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Soil Section",
+    "overview": "Every page is one continuous cut through an Essex kitchen-garden bed, read straight down. A dense hand-drawn patch of runner beans, tomatoes, courgettes, carrots, beetroot and garlic stands on a wavy ground line at the top of every route; the offer is set into the topsoil beneath it; further sections sit on survey paper (divided by faint drawn horizons) or on deeper strata (clay, chalk), and every page bottoms out in bedrock at the footer. The site reads like a hand-coloured soil-survey plate: white survey paper, deep ink-green linework, flat fills, stippled soil, a centimetre depth gauge, and plain name plates set along the line they describe.\n\nThis world replaced the earlier cream, Playfair and forest-green look, which is a confirmed anti-reference. It came from an impeccable direction roll (The Soil Section), was fused by the owner with the category standard played straight, and the owner chose composition \"A · The ground line\". All artwork is hand-built, procedural SVG in code; no generated raster ships. Density is high in the drawings and calm in the reading: heavy condensed caps for display, normal-width Archivo for everything you read, square rust-red actions, thin rules and plain price rows instead of cards.\n\nMotion is growth and nothing else: stems draw, leaves unfurl from their base, roots reach downward as the visitor scrolls, jars fill with brine. Every GSAP animation runs inside a reduced-motion gate and reverts to the finished drawing, so the still state is always the complete picture.",
+    "keyCharacteristics": [
+      "One continuous drawing: strata with wavy hand-drawn horizons, never floating card boxes.",
+      "Survey paper ground (paper) with ink-green type and linework; soil colours carry depth.",
+      "Archivo variable: 62.5%-width, weight-850 uppercase display; normal-width body.",
+      "Square everything that acts: rust buttons, ink-bordered fields, 2px ink frames on photos.",
+      "Procedural SVG plants with seeded variation; every drawing is decorative and `aria-hidden`.",
+      "Growth-only motion through GSAP, gated by `gsap.matchMedia('(prefers-reduced-motion: no-preference)')`."
+    ],
+    "rules": [
+      {
+        "name": "The One Rust Rule",
+        "body": "Rust means \"act here\". Every booking and primary action is a rust fill; the only other filled button is the ink form submit. Outside actions rust appears only as the focus outline, the form error block, the calendar's \"this month\" marker and small details inside drawings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Soil Carries Depth Rule",
+        "body": "Topsoil always sits directly under a garden band's ground line, bedrock is always the footer, and where clay and chalk both appear on a page, clay sits above chalk. Stratum colours fill full-bleed bands, never small decorative panels.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Widths Rule",
+        "body": "Condensed is for things you glance at (headings, names, prices); normal width is for things you read. Body copy is never condensed.",
+        "section": "typography"
+      },
+      {
+        "name": "The Survey Figures Rule",
+        "body": "Prices, depth-gauge numbers and figure numbers use tabular lining figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Step Away Rule",
+        "body": "A rust booking action sits in the desktop nav and the footer on every route, and in the hero band, at the end of the page and in the phone bottom bar on every route except Contact, which is the booking page itself.",
+        "section": "layout"
+      },
+      {
+        "name": "The Strata Not Shadows Rule",
+        "body": "Separate sections with a drawn horizon, a flat change of ground or a plain ink rule, never with a raised card or drop shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** start every route with the garden band on its ground line and the title set in topsoil beneath it, and end every route on the bedrock footer; where clay and chalk both appear, keep clay above chalk.",
+      "**Do** join sections with a drawn stratum edge (24px / 32px wavy horizon) and, where useful, a Label chip naming the stratum plainly.",
+      "**Do** set headings in Archivo at 62.5% width, 850 weight, uppercase, 0.9 line-height; set subheads at 72% width, 750, mixed case; keep reading copy at normal width.",
+      "**Do** use rust (#B23C1C, hover #92301A) for every primary action and keep a booking action one step away on every page.",
+      "**Do** keep actions, fields, frames and plates square with 2px Field Ink borders, and use thin ink rules plus plain price rows for lists.",
+      "**Do** draw new artwork as SVG in the Line Ink stroke and flat-fill hand, extending `src/art/plants.js` or the glyph set, and mark it `aria-hidden=\"true\" focusable=\"false\"`.",
+      "**Do** register every animation through `useMotion` / `gsap.matchMedia` so reduced motion shows the finished drawing.",
+      "**Do** label stock photos as stock (\"Unsplash\"), caption what is actually shown, and keep illustrative testimonials labelled as illustrative.",
+      "**Do** set prices, gauge numbers and figure numbers in tabular lining figures."
+    ],
+    "donts": [
+      "**Don't** bring back the old cream, Playfair and forest-green look; it is the anti-reference this world replaced.",
+      "**Don't** ship generated raster artwork; the artwork is hand-built SVG.",
+      "**Don't** build page structure from floating or raised cards and drop shadows; the only shadow is the name plate's lift, and framed panels (booking, success) stay flat and square.",
+      "**Don't** add a third filled-button colour: rust is for booking and primary actions, ink is for form submit only, and rust stays off anything but actions, focus, errors and the current-month marker.",
+      "**Don't** condense body copy or set paragraphs in uppercase.",
+      "**Don't** add decorative motion that is not growth (no parallax drifts, bounces or attention loops); interface chrome keeps to short functional transitions (200–300ms), and every new animation goes through the reduced-motion gate.",
+      "**Don't** present a stock photo, placeholder figure or illustrative quote as Patch A Mumma's own work."
+    ]
+  }
+}
