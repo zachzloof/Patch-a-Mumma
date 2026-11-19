@@ -1,0 +1,12 @@
+{
+  "name": "patch-a-mumma-demo",
+  "private": true,
+  "type": "module",
+  "description": "Repeatable Playwright walkthrough recording for the Patch A Mumma site. Run from the repo root with `npm run demo:record`.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}

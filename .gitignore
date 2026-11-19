@@ -25,3 +25,6 @@ dist-ssr
 
 # local tooling output
 .playwright-mcp
+
+# demo recordings (npm run demo:record)
+demo/output/
