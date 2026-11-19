@@ -39,15 +39,15 @@ useMotion(shelf, (el) => {
             A good harvest can be overwhelming. We'll show you how to ferment, pickle and preserve the glut, so
             nothing from your garden goes to waste and the pantry stays full all winter.
           </p>
-          <RouterLink to="/services#fermentation" class="link mt-6 inline-block text-[1.0625rem] text-ink">
+          <RouterLink to="/services#fermentation" class="link mt-4 inline-block py-2.5 text-[1.0625rem] text-ink">
             Fermentation &amp; preservation, from £80 a session
           </RouterLink>
         </div>
 
         <!-- the cellar shelf -->
         <div ref="shelf" class="lg:col-span-7">
-          <div class="grid grid-cols-5 items-end gap-2 px-2 sm:gap-4 sm:px-6">
-            <PreserveJar v-for="j in jars" :key="j.seed" v-bind="j" />
+          <div class="grid grid-cols-3 items-end gap-5 px-6 sm:grid-cols-5 sm:gap-4">
+            <PreserveJar v-for="j in jars" :key="j.seed" v-bind="j" :class="{ 'max-sm:hidden': !j.label }" />
           </div>
           <div class="h-4 border-2 border-ink bg-[#C9A26B]" aria-hidden="true" />
           <div class="mx-6 flex justify-between" aria-hidden="true">

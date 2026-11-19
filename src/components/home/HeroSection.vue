@@ -51,7 +51,7 @@ useMotion(soil, (el) => rootsOnScroll(el, { start: 'top 95%', end: 'bottom 20%' 
               Book a free chat
               <svg class="h-5 w-5" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
             </RouterLink>
-            <a href="#what-we-do" class="link text-[1.0625rem] text-paper decoration-[#C08A3E] hover:decoration-paper">
+            <a href="#what-we-do" class="link inline-block py-2.5 text-[1.0625rem] text-paper decoration-[#C08A3E] hover:decoration-paper">
               See what we do
             </a>
           </div>

@@ -20,7 +20,7 @@ import StrataEdge from '../components/art/StrataEdge.vue'
     <nav class="page-x pt-10" aria-label="Services on this page">
       <ul class="flex flex-wrap gap-2.5">
         <li v-for="s in services" :key="s.id">
-          <a :href="`#${s.id}`" class="inline-flex items-center gap-2 rounded-[3px] border border-ink/30 bg-paper px-3.5 py-2 text-[0.9375rem] font-semibold hover:border-ink hover:bg-leaf-100">
+          <a :href="`#${s.id}`" class="inline-flex items-center gap-2 rounded-[3px] border border-ink/30 bg-paper min-h-11 px-3.5 py-2 text-[0.9375rem] font-semibold hover:border-ink hover:bg-leaf-100">
             {{ s.title }}
           </a>
         </li>

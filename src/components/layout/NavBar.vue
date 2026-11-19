@@ -84,12 +84,12 @@ const isActive = (to) => (to === '/' ? route.path === '/' : route.path.startsWit
   <header class="sticky top-0 z-50 border-b border-ink/15 bg-paper">
     <a
       href="#main"
-      class="absolute left-3 top-2 z-[60] -translate-y-20 bg-ink px-4 py-2 font-semibold text-paper focus:translate-y-0"
+      class="absolute left-3 top-2 z-[60] -translate-y-20 bg-ink px-4 py-3 font-semibold text-paper focus:translate-y-0"
     >
       Skip to content
     </a>
     <nav class="page-x flex h-16 items-center justify-between gap-4" aria-label="Main">
-      <RouterLink to="/" class="group flex items-center gap-2 text-ink" aria-label="Patch A Mumma, home">
+      <RouterLink to="/" class="group flex min-h-11 items-center gap-2 text-ink" aria-label="Patch A Mumma, home">
         <SproutMark class="h-8 w-8 text-leaf-700 transition-transform duration-300 group-hover:-rotate-6" />
         <span class="display text-[1.75rem] leading-none tracking-[-0.005em]">Patch A Mumma</span>
       </RouterLink>
@@ -118,7 +118,7 @@ const isActive = (to) => (to === '/' ? route.path === '/' : route.path.startsWit
       <button
         ref="menuButton"
         type="button"
-        class="btn-line !min-h-0 !px-4 !py-2.5 text-[0.9375rem] md:hidden"
+        class="btn-line !min-h-11 !px-4 !py-2 text-[0.9375rem] md:hidden"
         :aria-expanded="menuOpen"
         aria-controls="mobile-menu"
         @click="menuOpen = !menuOpen"

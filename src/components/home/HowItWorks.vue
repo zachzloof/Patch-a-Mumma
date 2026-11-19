@@ -37,7 +37,7 @@ useMotion(root, () => beds.value.forEach((el) => growWhenSeen(el)))
 
       <ol class="mt-12 grid gap-12 md:mt-16 md:grid-cols-3 md:gap-0">
         <li v-for="(step, i) in steps" :key="step.title" class="md:px-6 md:first:pl-0 md:last:pr-0">
-          <div :ref="(el) => el && (beds[i] = el)">
+          <div :ref="(el) => el && (beds[i] = el)" :class="{ 'max-md:-mt-[26%]': i === 1 }">
             <RaisedBed :stage="i" />
           </div>
           <h3 class="condensed mt-5 text-[2rem]">{{ step.title }}</h3>

@@ -33,7 +33,7 @@ const sowingNow = crops.filter((c) => c.sow.includes(now)).map((c) => c.name.toL
           </template>
           <template v-else>This month is for planning, clearing and feeding the soil.</template>
         </p>
-        <RouterLink to="/contact#book" class="link mt-6 inline-block text-[1.0625rem] text-rust decoration-rust/40 hover:decoration-rust">
+        <RouterLink to="/contact#book" class="link mt-4 inline-block py-2.5 text-[1.0625rem] text-rust decoration-rust/40 hover:decoration-rust">
           Plan your first season with us
         </RouterLink>
       </div>

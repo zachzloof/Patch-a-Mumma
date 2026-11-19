@@ -21,7 +21,7 @@ const links = [
     <div class="absolute inset-0 overflow-hidden"><SoilFill kind="bedrock" :seed="31" /></div>
     <div class="page-x relative grid gap-10 pb-12 pt-14 md:grid-cols-12 md:pb-14">
       <div class="md:col-span-5">
-        <RouterLink to="/" class="inline-flex items-center gap-2 text-paper" aria-label="Patch A Mumma, home">
+        <RouterLink to="/" class="inline-flex min-h-11 items-center gap-2 text-paper" aria-label="Patch A Mumma, home">
           <span class="grid h-10 w-10 place-items-center rounded-full bg-paper"><SproutMark class="h-8 w-8 text-leaf-700" /></span>
           <span class="display text-[2rem]">Patch A Mumma</span>
         </RouterLink>
@@ -33,18 +33,18 @@ const links = [
 
       <nav class="md:col-span-3" aria-label="Footer">
         <h2 class="condensed text-[1.375rem] text-paper">Explore</h2>
-        <ul class="mt-4 space-y-2.5">
+        <ul class="mt-2">
           <li v-for="l in links" :key="l.to">
-            <RouterLink :to="l.to" class="hover:text-paper hover:underline">{{ l.label }}</RouterLink>
+            <RouterLink :to="l.to" class="inline-flex min-h-11 items-center hover:text-paper hover:underline">{{ l.label }}</RouterLink>
           </li>
         </ul>
       </nav>
 
       <div class="md:col-span-4">
         <h2 class="condensed text-[1.375rem] text-paper">Get in touch</h2>
-        <ul class="mt-4 space-y-2.5">
-          <li><a :href="`mailto:${CONTACT.email}`" class="break-all hover:text-paper hover:underline">{{ CONTACT.email }}</a></li>
-          <li>{{ CONTACT.place }}</li>
+        <ul class="mt-2">
+          <li><a :href="`mailto:${CONTACT.email}`" class="inline-flex min-h-11 items-center break-all hover:text-paper hover:underline">{{ CONTACT.email }}</a></li>
+          <li class="py-2.5">{{ CONTACT.place }}</li>
         </ul>
         <RouterLink to="/contact#book" data-book-cta class="btn-rust mt-6">Book a free chat</RouterLink>
       </div>

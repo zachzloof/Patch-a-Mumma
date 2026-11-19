@@ -121,10 +121,13 @@
 }
 
 /* Dormant states: plants not yet planted, drawn as dashed ghosts */
+.ghost {
+  opacity: 0.5;
+}
 .ghost path {
   fill: none !important;
   stroke: #8b989d !important;
-  stroke-dasharray: 3 3;
+  stroke-width: 0.8px !important;
 }
 
 .page-fade-enter-active,

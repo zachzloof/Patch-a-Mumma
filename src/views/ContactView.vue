@@ -79,7 +79,7 @@ const field =
 
         <div class="mt-10 border-t-2 border-ink pt-6">
           <h3 class="condensed text-[1.375rem]">Prefer to reach us directly?</h3>
-          <a :href="`mailto:${CONTACT.email}`" class="link mt-2 inline-block break-all text-[1.1875rem] text-ink">{{ CONTACT.email }}</a>
+          <a :href="`mailto:${CONTACT.email}`" class="link mt-1 inline-block break-all py-2 text-[1.1875rem] text-ink">{{ CONTACT.email }}</a>
           <p class="mt-2 text-ink-soft">{{ CONTACT.place }}</p>
         </div>
       </section>

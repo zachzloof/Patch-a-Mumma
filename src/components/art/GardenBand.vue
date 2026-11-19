@@ -216,7 +216,7 @@ useMotion(root, (el) => {
       <span
         v-for="t in set.tags || []"
         :key="'tag' + t.name"
-        class="absolute -translate-x-1/2 whitespace-nowrap border border-[#6B4A33] bg-humus-dark px-1.5 py-px text-[0.6875rem] font-semibold leading-tight text-[#E9DFC9] md:text-[0.75rem]"
+        class="absolute -translate-x-1/2 whitespace-nowrap border border-[#6B4A33] bg-humus-dark px-1.5 py-px text-[0.75rem] font-semibold leading-tight text-[#E9DFC9] md:text-[0.8125rem]"
         :style="{ left: (t.x / set.W) * 100 + '%', top: ((set.G + 14) / set.H) * 100 + '%' }"
       >
         {{ t.name }}<span v-if="t.note" class="font-normal text-[#CDBFA3]"> · {{ t.note }}</span>

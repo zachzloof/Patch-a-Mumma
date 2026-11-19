@@ -62,7 +62,7 @@ const inside = computed(() => {
     <!-- lid and swing clasp -->
     <path d="M12 14h36v8H12z" fill="#8B989D" stroke="#173D1F" stroke-width="1.4" />
     <path d="M12 18c-4 0-5 8 0 10M48 18c4 0 5 8 0 10" fill="none" stroke="#4F4A44" stroke-width="1.2" />
-    <rect v-if="label" x="15" y="56" width="30" height="16" fill="#FAF9F4" stroke="#173D1F" stroke-width="1" />
-    <text v-if="label" x="30" y="67" text-anchor="middle" font-family="Archivo, sans-serif" font-size="7" font-weight="700" fill="#10291C">{{ label }}</text>
+    <rect v-if="label" x="11" y="54" width="38" height="19" fill="#FAF9F4" stroke="#173D1F" stroke-width="1" />
+    <text v-if="label" x="30" y="67.5" text-anchor="middle" font-family="Archivo, sans-serif" font-size="8.5" font-weight="700" fill="#10291C">{{ label }}</text>
   </svg>
 </template>
