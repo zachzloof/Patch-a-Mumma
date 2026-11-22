@@ -49,10 +49,14 @@ const links = [
         <RouterLink to="/contact#book" data-book-cta class="btn-rust mt-6">Book a free chat</RouterLink>
       </div>
     </div>
-    <div class="relative border-t border-[#4A3426]">
-      <div class="page-x flex flex-col justify-between gap-2 py-5 pb-28 text-[0.875rem] text-[#CDBFA3] sm:flex-row md:pb-5">
+    <div class="relative border-t border-[#4A3426] text-[0.875rem] text-[#CDBFA3]">
+      <div class="page-x flex flex-col justify-between gap-2 pt-5 sm:flex-row">
         <p>© {{ year }} Patch A Mumma. All rights reserved.</p>
         <p>Grown with love, harvested with purpose.</p>
+      </div>
+      <!-- pb-28 clears the fixed mobile booking bar (NavBar.vue) -->
+      <div class="page-x pb-28 md:pb-3">
+        <zloof-credit client="patch-a-mumma"></zloof-credit>
       </div>
     </div>
   </footer>
